@@ -12,10 +12,6 @@
 
     <title>Raposa Caçadora</title>
 
-    <!-- Telegram Mini App -->
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-
-    <!-- Estilos -->
     <link rel="stylesheet" href="/static/style.css">
 
 </head>
@@ -24,9 +20,7 @@
 
     <main class="game-container">
 
-        <!-- =====================================================
-             CABEÇALHO
-        ====================================================== -->
+        <!-- CABEÇALHO -->
 
         <section class="hero">
 
@@ -42,12 +36,26 @@
                 Encontre a oferta. Acerte o preço. Ganhe pontos.
             </p>
 
+            <!-- DIAGNÓSTICO TEMPORÁRIO -->
+
+            <div
+                id="debug"
+                style="
+                    margin-top: 12px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    background: rgba(0, 0, 0, 0.18);
+                    font-size: 12px;
+                    line-height: 1.4;
+                "
+            >
+                🔄 Iniciando...
+            </div>
+
         </section>
 
 
-        <!-- =====================================================
-             ESTATÍSTICAS
-        ====================================================== -->
+        <!-- ESTATÍSTICAS -->
 
         <section class="stats">
 
@@ -83,9 +91,7 @@
         </section>
 
 
-        <!-- =====================================================
-             MENU
-        ====================================================== -->
+        <!-- MENU -->
 
         <section class="menu">
 
@@ -107,9 +113,7 @@
         </section>
 
 
-        <!-- =====================================================
-             GAME
-        ====================================================== -->
+        <!-- GAME -->
 
         <section
             id="game"
@@ -132,11 +136,9 @@
                     🎧
                 </div>
 
-
                 <h3>
                     Fone Bluetooth
                 </h3>
-
 
                 <p>
                     Você encontrou uma possível oferta.
@@ -181,9 +183,7 @@
         </section>
 
 
-        <!-- =====================================================
-             RANKING
-        ====================================================== -->
+        <!-- RANKING -->
 
         <section
             id="ranking"
@@ -197,9 +197,7 @@
 
             <div class="ranking-item">
 
-                <span>
-                    🥇
-                </span>
+                <span>🥇</span>
 
                 <strong>
                     RaposaMaster
@@ -214,9 +212,7 @@
 
             <div class="ranking-item">
 
-                <span>
-                    🥈
-                </span>
+                <span>🥈</span>
 
                 <strong>
                     Caçador10
@@ -231,9 +227,7 @@
 
             <div class="ranking-item">
 
-                <span>
-                    🥉
-                </span>
+                <span>🥉</span>
 
                 <strong>
                     Ofertão
@@ -256,9 +250,7 @@
         </section>
 
 
-        <!-- =====================================================
-             RODAPÉ
-        ====================================================== -->
+        <!-- RODAPÉ -->
 
         <footer>
             🦊 Raposa Caçadora
@@ -267,16 +259,11 @@
     </main>
 
 
-    <!-- =========================================================
-         TELEGRAM MINI APP
-    ========================================================== -->
+    <!-- TELEGRAM MINI APP -->
 
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
-
-    <!-- =========================================================
-         JAVASCRIPT DO GAME
-    ========================================================== -->
+    <!-- NOSSO JAVASCRIPT -->
 
     <script src="/static/app.js"></script>
 
