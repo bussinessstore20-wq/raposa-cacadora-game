@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Raposa Caçadora</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <main class="game-container">
+
+        <section class="hero">
+            <div class="fox">🦊</div>
+
+            <h1>Raposa Caçadora</h1>
+
+            <p class="subtitle">
+                Encontre a oferta. Acerte o preço. Ganhe pontos.
+            </p>
+        </section>
+
+        <section class="stats">
+            <div class="stat">
+                <span>🏆</span>
+                <strong id="score">0</strong>
+                <small>Pontos</small>
+            </div>
+
+            <div class="stat">
+                <span>🔥</span>
+                <strong id="streak">0</strong>
+                <small>Sequência</small>
+            </div>
+        </section>
+
+        <section class="menu">
+
+            <button id="playButton" class="primary-button">
+                🎮 JOGAR AGORA
+            </button>
+
+            <button class="secondary-button" onclick="showRanking()">
+                🏆 Ranking
+            </button>
+
+        </section>
+
+        <section id="game" class="game-card hidden">
+
+            <div class="question-number">
+                DESAFIO #1
+            </div>
+
+            <h2>🎯 Qual é o preço?</h2>
+
+            <div class="product">
+                <div class="product-image">🎧</div>
+
+                <h3>Fone Bluetooth</h3>
+
+                <p>Você encontrou uma possível oferta.</p>
+            </div>
+
+            <div class="options">
+
+                <button class="option" data-answer="49">
+                    R$ 49,90
+                </button>
+
+                <button class="option" data-answer="89">
+                    R$ 89,90
+                </button>
+
+                <button class="option" data-answer="129">
+                    R$ 129,90
+                </button>
+
+            </div>
+
+            <div id="result" class="result"></div>
+
+        </section>
+
+        <section id="ranking" class="ranking-card hidden">
+
+            <h2>🏆 Ranking</h2>
+
+            <div class="ranking-item">
+                <span>🥇</span>
+                <strong>RaposaMaster</strong>
+                <span>2.450 pts</span>
+            </div>
+
+            <div class="ranking-item">
+                <span>🥈</span>
+                <strong>Caçador10</strong>
+                <span>2.120 pts</span>
+            </div>
+
+            <div class="ranking-item">
+                <span>🥉</span>
+                <strong>Ofertão</strong>
+                <span>1.890 pts</span>
+            </div>
+
+            <button class="secondary-button" onclick="closeRanking()">
+                Voltar
+            </button>
+
+        </section>
+
+        <footer>
+            🦊 Raposa Caçadora
+        </footer>
+
+    </main>
+
+    <script src="/static/app.js"></script>
+
+</body>
+</html>
