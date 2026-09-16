@@ -1,117 +1,264 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
 
     <title>Raposa Caçadora</title>
 
+    <!-- Telegram Mini App -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+    <!-- Estilos -->
     <link rel="stylesheet" href="/static/style.css">
+
 </head>
 
 <body>
 
     <main class="game-container">
 
-        <section class="hero">
-            <div class="fox">🦊</div>
+        <!-- =====================================================
+             CABEÇALHO
+        ====================================================== -->
 
-            <h1>Raposa Caçadora</h1>
+        <section class="hero">
+
+            <div class="fox">
+                🦊
+            </div>
+
+            <h1>
+                Raposa Caçadora
+            </h1>
 
             <p class="subtitle">
                 Encontre a oferta. Acerte o preço. Ganhe pontos.
             </p>
+
         </section>
+
+
+        <!-- =====================================================
+             ESTATÍSTICAS
+        ====================================================== -->
 
         <section class="stats">
-            <div class="stat">
-                <span>🏆</span>
-                <strong id="score">0</strong>
-                <small>Pontos</small>
-            </div>
 
             <div class="stat">
-                <span>🔥</span>
-                <strong id="streak">0</strong>
-                <small>Sequência</small>
+
+                <span>🏆</span>
+
+                <strong id="score">
+                    0
+                </strong>
+
+                <small>
+                    Pontos
+                </small>
+
             </div>
+
+
+            <div class="stat">
+
+                <span>🔥</span>
+
+                <strong id="streak">
+                    0
+                </strong>
+
+                <small>
+                    Sequência
+                </small>
+
+            </div>
+
         </section>
+
+
+        <!-- =====================================================
+             MENU
+        ====================================================== -->
 
         <section class="menu">
 
-            <button id="playButton" class="primary-button">
+            <button
+                id="playButton"
+                class="primary-button"
+            >
                 🎮 JOGAR AGORA
             </button>
 
-            <button class="secondary-button" onclick="showRanking()">
+
+            <button
+                class="secondary-button"
+                onclick="showRanking()"
+            >
                 🏆 Ranking
             </button>
 
         </section>
 
-        <section id="game" class="game-card hidden">
+
+        <!-- =====================================================
+             GAME
+        ====================================================== -->
+
+        <section
+            id="game"
+            class="game-card hidden"
+        >
 
             <div class="question-number">
                 DESAFIO #1
             </div>
 
-            <h2>🎯 Qual é o preço?</h2>
+
+            <h2>
+                🎯 Qual é o preço?
+            </h2>
+
 
             <div class="product">
-                <div class="product-image">🎧</div>
 
-                <h3>Fone Bluetooth</h3>
+                <div class="product-image">
+                    🎧
+                </div>
 
-                <p>Você encontrou uma possível oferta.</p>
+
+                <h3>
+                    Fone Bluetooth
+                </h3>
+
+
+                <p>
+                    Você encontrou uma possível oferta.
+                </p>
+
             </div>
+
 
             <div class="options">
 
-                <button class="option" data-answer="49">
+                <button
+                    class="option"
+                    data-answer="49"
+                >
                     R$ 49,90
                 </button>
 
-                <button class="option" data-answer="89">
+
+                <button
+                    class="option"
+                    data-answer="89"
+                >
                     R$ 89,90
                 </button>
 
-                <button class="option" data-answer="129">
+
+                <button
+                    class="option"
+                    data-answer="129"
+                >
                     R$ 129,90
                 </button>
 
             </div>
 
-            <div id="result" class="result"></div>
+
+            <div
+                id="result"
+                class="result"
+            ></div>
 
         </section>
 
-        <section id="ranking" class="ranking-card hidden">
 
-            <h2>🏆 Ranking</h2>
+        <!-- =====================================================
+             RANKING
+        ====================================================== -->
+
+        <section
+            id="ranking"
+            class="ranking-card hidden"
+        >
+
+            <h2>
+                🏆 Ranking
+            </h2>
+
 
             <div class="ranking-item">
-                <span>🥇</span>
-                <strong>RaposaMaster</strong>
-                <span>2.450 pts</span>
+
+                <span>
+                    🥇
+                </span>
+
+                <strong>
+                    RaposaMaster
+                </strong>
+
+                <span>
+                    2.450 pts
+                </span>
+
             </div>
+
 
             <div class="ranking-item">
-                <span>🥈</span>
-                <strong>Caçador10</strong>
-                <span>2.120 pts</span>
+
+                <span>
+                    🥈
+                </span>
+
+                <strong>
+                    Caçador10
+                </strong>
+
+                <span>
+                    2.120 pts
+                </span>
+
             </div>
+
 
             <div class="ranking-item">
-                <span>🥉</span>
-                <strong>Ofertão</strong>
-                <span>1.890 pts</span>
+
+                <span>
+                    🥉
+                </span>
+
+                <strong>
+                    Ofertão
+                </strong>
+
+                <span>
+                    1.890 pts
+                </span>
+
             </div>
 
-            <button class="secondary-button" onclick="closeRanking()">
+
+            <button
+                class="secondary-button"
+                onclick="closeRanking()"
+            >
                 Voltar
             </button>
 
         </section>
+
+
+        <!-- =====================================================
+             RODAPÉ
+        ====================================================== -->
 
         <footer>
             🦊 Raposa Caçadora
@@ -119,7 +266,20 @@
 
     </main>
 
+
+    <!-- =========================================================
+         TELEGRAM MINI APP
+    ========================================================== -->
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+
+    <!-- =========================================================
+         JAVASCRIPT DO GAME
+    ========================================================== -->
+
     <script src="/static/app.js"></script>
 
 </body>
+
 </html>
